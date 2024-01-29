@@ -1,0 +1,126 @@
+/* Code applied to all standard HTML element tags */
+* {
+    text-decoration: none;
+    font-family: 'Cursive', sans-serif;
+  }
+
+  html,
+  body {
+    background-color: #2e3f4f;
+    /* Dark blue background */
+    text-align: center;
+    min-height: -webkit-fill-available;
+    color: #fff;
+    /* White text */
+  }
+
+  span {
+    font-size: large;
+    color: #ff6363;
+    /* Red text */
+  }
+
+  form {
+    margin: auto;
+  }
+
+  label {
+    font-size: large;
+    color: #ffcc00;
+    /* Yellow text */
+  }
+
+  #transportation, input {
+    padding: 1%;
+    border-radius: 3px;
+    border: none;
+    color: #8b0000;
+    background-color: #c0ffee;
+  }
+
+  input[type] {
+    text-align: center;
+  }
+
+  .col-25 {
+    margin-bottom: 5px;
+  }
+  .row {
+    margin-top: 3%;
+  }
+  
+  #group {
+    min-width: 18rem;
+  }
+
+  #nChild {
+    min-width: 24rem;
+  }
+
+  #nParent {
+    min-width: 26rem;
+  }
+
+  #phoneNrChild {
+    min-width: 22rem;
+  }
+
+  #phoneNrParent {
+    min-width: 20rem;
+  }
+
+  #eMailChild {
+    min-width: 20rem;
+  }
+
+  #eMailParent {
+    min-width: 20rem;
+  }
+
+  ::placeholder {
+    text-align: center;
+    color: #8b0000;
+    font-size: medium;
+    margin: auto;
+  }
+
+  #submitButton {
+    padding: 10px 20px;
+    background-color: #e44d26;
+    /* Christmas red button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: inherit;
+    margin-top: 10%;
+  }
+
+  #submitButton:hover {
+    background-color: #bf4021;
+    /* Darker red on hover */
+    color: #fff;
+  }
+
+  #submitButton:active {
+    background-color: #992b1a;
+    /* Even darker red on click */
+    color: #fff;
+  }
+
+  #transportation {
+    max-width: fit-content;
+    padding: 1%;
+    margin: auto;
+  }
+
+  #iBAN {
+    min-width: 24rem;;
+    background-color: #c0ffee;
+    /* Light green background */
+    border-radius: 3px;
+    padding: 1%;
+  }
+
+  #iBAN::placeholder {
+    font-size: 15px;
+  }

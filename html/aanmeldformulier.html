@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+  <title>Kerkkamp Middelbare school Aanmeldformulier</title>
+
+  <!--metatags for responsiveness-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8">
+
+  <!-- Stylesheets -->
+<link rel="stylesheet" href="../css/aanmeldformulier.css">
+
+</head>
+
+<body>
+    <form id="form" action="https://formsubmit.co/Ginaarmanyous032@gmail.com" method="POST" target="_self">
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="group">Groep:</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="group" name="Groep" placeholder="Vul hier de groep in van de deelnemer" min="5" max="8"
+            required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="nChild">Naam Deelnemer:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="nChild" name="Voor- en Achternaam deelnemer"
+            placeholder="Vul hier de voor- en achternaam in van de deelnemer" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="nParent">Naam Ouder</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="nParent" name="Voor- en Achternaam ouder"
+            placeholder="Vul hier de voor- en achternaam in van één van de ouders" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="phoneNrChild">Telefoonnummer Deelnemer:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="phoneNrChild" name="Telefoonnummer Deelnemer"
+            placeholder="Vul hier het telefoonummer in van de deelnemer">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="phoneNrParent">Telefoonnummer Ouder:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="phoneNrParent" name="Telefoonnummer Ouder"
+            placeholder="Vul hier het telefoonummer in van de ouder" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="eMailChild">E-mail Deelnemer:</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="eMailChild" name="Email Deelnemer"
+            placeholder="Vul hier het E-mailadres in van de deelnemer">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="eMailParent">E-mail Ouder:</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="eMailParent" name="Email Ouder" placeholder="Vul hier het E-mailadres in van de ouder"
+            required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="iBAN">IBAN:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="iBAN" name="iBAN" placeholder="Vul hier het bankrekeningnummer in waarmee je betaalt"
+            required>
+        </div>
+      </div>
+
+      <button id="submitButton" type="submit">Verzend gegevens</button>
+
+  </form>
+
+  <script async>
+    document.getElementById("submitButton").addEventListener("click", function (e) {
+      // Prevent default link behavior (navigate to the URL)
+      e.preventDefault();
+
+      // Show the first message to the user
+      var confirmation = confirm("Heb je alle velden met je gegevens al ingevuld en op de \n 'Verzend gegevens' knop geklikt? \n\n"
+        + "Vergeet hierna niet de 'Ik ben geen robot' reCAPTCHA aan te vinken! \n\n"
+        + "Vergeet niet om hierna op de 'Betalen' knop te klikken om te betalen! \n\n"
+        + "Klik op 'OK' voor 'JA'. Klik op 'Annuleren' voor 'NEE'."
+      );
+
+      // If the user clicks OK, submit the form
+      if (confirmation) {
+        document.getElementById("form").submit();
+      } else {
+        // If the user clicks Cancel, show a message
+        var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op \n 'Verzend gegevens' en vink vervolgens de 'Ik ben geen robot' reCAPTCHA aan");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
