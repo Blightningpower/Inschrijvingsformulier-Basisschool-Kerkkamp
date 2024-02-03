@@ -19,7 +19,10 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    
+
+    <!-- Scriptfiles -->
+    <script src="js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -29,8 +32,8 @@
     <main>
         <ul>
             <li>
-                <h2>Vul in dit Inschrijvingsformulier je gegevens in en klik op de knop 'Verzend gegevens' om je gegevens te
-                    verzenden.</h2>
+                <h2>Vul in dit inschrijvingsformulier je gegevens in en klik op de knop 'Verzend gegevens' om je
+                    gegevens te verzenden.</h2>
             </li>
             <li>
                 <h2>
@@ -39,7 +42,8 @@
                 </h2>
             </li>
             <li>
-                <h2>Klik daarna op de knop 'Betalen' om je aanmelding te voltooien. De kosten voor het kamp zijn €50,-</h2>
+                <h2>Klik daarna op de knop 'Betalen' om je aanmelding te voltooien. De kosten voor het kamp zijn €50,-
+                </h2>
             </li>
             <li>
                 <h2>Vul in de beschrijving van de Tikkie nogmaals de naam van de deelnemer in die zich inschrijft en
@@ -76,27 +80,6 @@
         <a href="https://www.ing.nl/de-ing/payreq?trxid=6xqv8tf8iakyoO9IU3thSI7KepVp26le&flow-step=payment-request"
             id="payment-button">Betalen</a>
     </main>
-    <script async>
-        // Voeg een klikgebeurtenislistener toe aan de betalingsknop
-        document.getElementById("payment-button").addEventListener("click", function (e) {
-            // Voorkom standaardgedrag van de link (navigeren naar de URL)
-            e.preventDefault();
-
-            // Toon het eerste bericht aan de gebruiker
-            var confirmation = confirm("Heb je alle velden met je gegevens al ingevuld en op de \n 'Verzend gegevens' knop geklikt? \n\n"
-                + "Vergeet hierna niet de 'Ik ben geen robot' reCAPTCHA aan te vinken! \n\n"
-                + "Klik op 'OK' voor 'JA'. Klik op 'Annuleren' voor 'NEE'."
-            );
-
-            // Als de gebruiker op OK klikt, navigeer naar de Tikkie-link
-            if (confirmation) {
-                window.location.href = this.href;
-            } else {
-                // Als de gebruiker op Annuleren klikt, toon een bericht
-                var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op \n 'Verzend gegevens' en vink vervolgens de 'Ik ben geen robot' reCAPTCHA aan");
-            }
-        });
-    </script>
 </body>
 
 </html>
