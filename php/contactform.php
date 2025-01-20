@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $iban = $_POST['iBAN'];
 
     // Email configuration
-    $mailTo = "ginaarmanyous032@gmail.com";
-    $subject = "Form Submission"; // Set your email subject here
+    $mailTo = "ginaarmanyous098@outlook.com";
+    $subject = "Kerkkamp Aanmeldformulier"; // Set your email subject here
     $headers = "From: " . $emailDeelnemer; // You can set the sender's email here
 
     // Email content
