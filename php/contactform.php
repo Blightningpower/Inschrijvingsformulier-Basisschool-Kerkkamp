@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Email configuration
     $mailTo = "ginaarmanyous098@outlook.com";
-    $subject = "Kerkkamp Aanmeldformulier"; // Set your email subject here
+    $subject = "Kerkkamp Aanmeldformulier 2026"; // Set your email subject here
     $headers = "From: " . $emailDeelnemer; // You can set the sender's email here
 
     // Email content
