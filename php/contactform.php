@@ -1,4 +1,6 @@
 <?php
+session_start(); // ← TOEVOEGEN
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $groep = $_POST['Groep'];
@@ -12,8 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Email configuration
     $mailTo = "ginaarmanyous098@outlook.com";
-    $subject = "Kerkkamp Aanmeldformulier 2026"; // Set your email subject here
-    $headers = "From: " . $emailDeelnemer; // You can set the sender's email here
+    $subject = "Kerkkamp Aanmeldformulier 2026";
+    $headers = "From: ginaarmanyous098@outlook.com\r\n"; // ← Gebruik vaste e-mailadres
+    $headers .= "Reply-To: " . $emailOuder . "\r\n"; // ← Gebruik Reply-To in plaats daarvan
+    $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
 
     // Email content
     $txt = "Je hebt een aanmelding ontvangen van " . "\n"
@@ -44,15 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n"; // Set X-Mailer
 
     // Send email
-    mail($mailTo, $subject, $txt, $headers);
-
-
-
-
-    $_SESSION['form_submitted'] = true;
-
-    // Redirect to another page
-    header("Location: ../html/payment.html");
-    exit();
+    if (mail($mailTo, $subject, $txt, $headers)) {
+        $_SESSION['form_submitted'] = true;
+        header("Location: ../html/payment.html");
+        exit();
+    } else {
+        echo "Fout: E-mail kon niet verzonden worden. Neem contact op met de administrator.";
+    }
 }
 ?>
