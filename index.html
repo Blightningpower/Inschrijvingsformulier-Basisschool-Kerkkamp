@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-  <title>Inschrijvingsformulier Basisschool Kerkkamp 2026</title>
+  <title>Basisschool-Kerkkamp-Aanmeldformulier_2026</title>
 
   <!--links for the Favicons-->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
@@ -22,7 +22,7 @@
 
 <body>
   <header>
-    <h1>Inschrijvingsformulier Basisschool Kerkkamp 2026</h1>
+    <h1>Basisschool-Kerkkamp-Aanmeldformulier_2026</h1>
   </header>
   <main>
     <ul>
@@ -39,13 +39,10 @@
         <h2><span>GEEN betaling is GEEN aanmelding!</span></h2>
       </li>
       <li>
-        <h2>Kijk voor de zekerheid op je bankrekening of het bedrag is betaald.</h2>
+        <h2>Kijk voor de zekerheid op je bankrekening of het bedrag is betaald en stuur een appje naar Gina Armanyous via <a href="#telephoneNumber" class="telephoneNumberAnchor">de onderstaande telefoonnummer</a> zodra het is gelukt.</h2>
       </li>
       <li>
-        <h2>Neem contact op bij twijfels.</h2>
-      </li>
-      <li>
-        <h2>Alle velden in dit formulier zijn verplicht in te vullen.</h2>
+        <h2>Alle velden met een <span class="requiredField">*</span> in dit formulier zijn verplicht in te vullen.</h2>
       </li>
       <li>
         <h2>Het kamp is van <span>maandag 16 februari tot en met woensdag 18 februari op Landgoed de Biestheuvel (Hoogcasteren 25, 5528 NP Hoogeloon)</span></h2>
@@ -57,13 +54,16 @@
         <h2><span>(LET OP! Dit formulier is per deelnemer. Als je meer deelnemers wilt aanmelden, moet je meerdere keren het formulier invullen en betalen!)</span></h2>
       </li>
       <li>
-        <h2>Problemen met aanmelden? Neem contact op met Gina Armanyous via haar telefoonnummer: <a href="tel:+31640746017" class="telephoneNumber">06 407 460 17</a></h2>
+        <h2>Problemen met aanmelden? Neem contact op met Gina Armanyous via haar telefoonnummer: <a href="tel:+31640746017" id="telephoneNumber">06 407 460 17</a></h2>
       </li>
     </ul>
     <form id="form" action="php/contactform.php" method="POST" target="_self">
+
+      <!-- Deelnemergegevens -->
+
       <div class="row">
         <div class="col-25">
-          <label for="group">Groep:</label>
+          <label for="group"><span class="requiredField">*</span>Groep:</label>
         </div>
         <div class="col-75">
           <input type="number" id="group" name="Groep" placeholder="Groep (5-8)" min="5" max="8" required>
@@ -72,7 +72,7 @@
 
       <div class="row">
         <div class="col-25">
-          <label for="nChild">Naam Deelnemer:</label>
+          <label for="nChild"><span class="requiredField">*</span>Naam Deelnemer:</label>
         </div>
         <div class="col-75">
           <input type="text" id="nChild" name="naamDeelnemer" placeholder="Bijv. Mina Shenouda" required>
@@ -81,28 +81,10 @@
 
       <div class="row">
         <div class="col-25">
-          <label for="nParent">Naam Ouder:</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="nParent" name="naamOuder" placeholder="Bijv. Maryan Shenouda" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
           <label for="phoneNrChild">Telefoonnummer Deelnemer:</label>
         </div>
         <div class="col-75">
-          <input type="text" id="phoneNrChild" name="telefoonnummerDeelnemer" placeholder="Bijv. 0612345678">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
-          <label for="phoneNrParent">Telefoonnummer Ouder:</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="phoneNrParent" name="telefoonnummerOuder" placeholder="Bijv. 0612345678" required>
+          <input type="text" id="phoneNrChild" name="telefoonnummerDeelnemer" placeholder="Bijv. 06 12345678">
         </div>
       </div>
 
@@ -111,25 +93,47 @@
           <label for="eMailChild">E-mail Deelnemer:</label>
         </div>
         <div class="col-75">
-          <input type="email" id="eMailChild" name="emailDeelnemer" placeholder="Bijv. mina.shenouda@mail.com">
+          <input type="email" id="eMailChild" name="emailDeelnemer" placeholder="Bijv. mina2020@outlook.com">
+        </div>
+      </div>
+
+      <!-- Oudergegevens -->
+
+      <div class="row">
+        <div class="col-25">
+          <label for="nParent"><span class="requiredField">*</span>Naam Ouder:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="nParent" name="naamOuder" placeholder="Bijv. Marian Fouad" required>
         </div>
       </div>
 
       <div class="row">
         <div class="col-25">
-          <label for="eMailParent">E-mail Ouder:</label>
+          <label for="phoneNrParent"><span class="requiredField">*</span>Telefoonnummer Ouder:</label>
         </div>
         <div class="col-75">
-          <input type="email" id="eMailParent" name="emailOuder" placeholder="Bijv. maryan.shenouda@mail.com" required>
+          <input type="text" id="phoneNrParent" name="telefoonnummerOuder" placeholder="Bijv. 06 87654321" required>
         </div>
       </div>
 
       <div class="row">
         <div class="col-25">
-          <label for="iBAN">IBAN:</label>
+          <label for="eMailParent"><span class="requiredField">*</span>E-mail Ouder:</label>
         </div>
         <div class="col-75">
-          <input type="text" id="iBAN" name="iBAN" placeholder="Bijv. NL91ABNA0417164300" required>
+          <input type="email" id="eMailParent" name="emailOuder" placeholder="Bijv. marian1973@gmail.com" required>
+        </div>
+      </div>
+
+      <!-- Betalinggegevens -->
+
+      <div class="row">
+        <div class="col-25">
+          <label for="iBAN"><span class="requiredField">*</span>IBAN:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="iBAN" name="iBAN" placeholder="Bijv. NL00BANK0123456789" required>
         </div>
       </div>
 
